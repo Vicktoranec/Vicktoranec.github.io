@@ -1,0 +1,24 @@
+<div class="header">
+<div class="inner-header">
+		<div class="inner-header-1">
+			<a class="homebutton"><img src="src/images/QUV0dNzu4c0.jpg" height="40px"></a>
+		</div>
+		<div class="inner-header-2 text-3"><span>Технологии и гаджеты | Новинки</span></div>
+		<div class="inner-header-3">			
+		</div>
+</div>
+</div>
+
+<div *ngIf="orderSent" class="m-a-1 text-xs-center">
+	<h2>Публикация добавлена в хранилище</h2>
+	<p>Войдите в учётную запись пользователя для завершения добавления.</p>
+	<button class="stylebutton-2 btn btn-primary" routerLink="/store">Вернуться на главную</button>
+</div>
+
+<form *ngIf="!orderSent" #form="ngForm" novalidate
+(ngSubmit)="submitOrder(form)" class="m-a-1">
+	<div class="text-xs-center">
+		<button class="stylebutton-2 btn btn-secondary" routerLink="/cart">Назад</button>
+		<button class="stylebutton-2 btn btn-primary" type="submit">Добавить в хранилище</button>
+	</div>
+</form>

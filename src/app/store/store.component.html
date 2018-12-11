@@ -1,0 +1,119 @@
+<div class="header">
+<div class="inner-header">
+		<div class="inner-header-1">
+			<table>
+				<tr>
+					<td>
+						<td>
+						<a class="homebutton" (click)="changeCategory()"><img src="src/images/QUV0dNzu4c0.jpg" height="40px"></a>
+						</td>
+						<td>
+						<button class="stylebutton-2 btn-block btn-sm" routerLink="/user/main/orders">
+							Cloud
+						</button>
+					</td>
+				</tr>
+			</table>		
+		</div>
+		<div class="inner-header-2 text-3"><span>Технологии и гаджеты | Новинки</span></div>
+		<div class="inner-header-3">
+			<table>
+				<tr>
+					<td>
+						<button class="stylebutton-2 btn-block btn-sm" routerLink="/admin">
+						Admin
+						</button>
+						</td>
+						<td>
+						<button class="stylebutton-2 btn-block btn-sm" routerLink="/user">
+						User
+						</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+</div>
+</div>
+
+<div class="row bluepage">
+
+<div class="navigation">
+<div class="inner-navigation">
+	<p class="letter-1">Навигация по категориям:</p>
+	<button *ngFor="let cat of categories"
+		class="stylebutton-2 btn-outline-primary btn-block"
+		[class.active]="cat == selectedCategory"
+		(click)="changeCategory(cat)">
+		{{cat}}
+	</button>
+</div>
+</div>
+
+<div class="content">
+<div class="inner-content">
+	<div class="inner-content-1">
+		<ul class="hornav">
+			<li><a class="letter-1" (click)="changeCategory()">Главная</a></li>
+			<li><a class="letter-1" >О сайте</a></li>
+			<li><a class="letter-1" >Услуги</a></li>
+			<li><a class="letter-1" >Видео</a></li>
+			<li><a class="letter-1" >Связь и Контакты</a></li>
+		</ul>
+	</div>
+	<div *ngFor="let product of products" class="inner-content-2">
+		<h4 class="card-header">
+			{{product.name}}
+			<span class="pull-xs-right tag tag-pill tag-primary">
+			{{ product.price | currency:"USD":true:"2.2-2" }}
+			</span>
+		</h4>
+		<div class="card-text p-a-1">
+			{{product.description}}
+		<button class="btn btn-success btn-sm pull-xs-right" style="background-color:#b6ec55;color:#2B8FDC"
+			(click)="addProductToCart(product)" routerLink="/checkout"
+			 > <!--routerLink="/user"-->
+			Добавить в хранилище
+		</button>
+		</div>
+	</div>
+	<div class="form-inline pull-xs-left m-r-1">
+		<select class="form-control" [value]="productsPerPage"
+			(change)="changePageSize($event.target.value)">
+		<option value="3">3 новости на Страницу</option>
+		<option value="4">4 новости на Страницу</option>
+		<option value="6">6 новостей на Страницу</option>
+		<option value="8">8 новостей на Страницу</option>
+		</select>
+	</div>
+	<div class="btn-group pull-xs-right">
+		<button *counter="let page of pageCount" (click)="changePage(page)"
+			class="btn btn-outline-primary " [class.active]="page == selectedPage">
+			{{page}}
+		</button>
+	</div>
+</div>
+</div>
+
+<div class="sidebar">
+<div class="inner-sidebar">
+	<p class="letter-1">Навигация по брендам:</p>
+	<button *ngFor="let cat of categories"
+		class="stylebutton-2 btn-outline-primary btn-block"
+		[class.active]="cat == selectedCategory"
+		(click)="changeCategory(cat)">
+		{{cat}}
+	</button>
+</div>
+</div>
+
+</div>
+
+<div class="row bluepage">
+ 
+<div class="footer">
+	<div class="inner-footer">
+		Подвал сайта
+	</div>
+</div> 
+
+</div>

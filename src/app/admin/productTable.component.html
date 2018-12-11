@@ -1,0 +1,34 @@
+<div>
+	<div class="inner-content-2">
+		<div class="card-text p-a-1">
+			<table class="table table-sm table-striped">
+				<thead>
+					<tr>
+						<th>ID</th><th>Заголовок</th><th>Категория</th><th>Цена</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let p of getProducts()">
+						<td>{{p.id}}</td>
+						<td>{{p.name}}</td>
+						<td>{{p.category}}</td>
+						<td>{{p.price | currency:"USD":true:"2.2-2"}}</td>
+						<td>
+						<button class="btn btn-sm btn-warning"
+						[routerLink]="['/admin/main/products/edit', p.id]">
+						Редактировать
+						</button>
+						<button class="btn btn-sm btn-danger" (click)="deleteProduct(p.id)">
+						Удалить
+						</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<button class="stylebutton-2 btn btn-primary" routerLink="/admin/main/products/create">
+			Создать Новую Публикацию
+			</button>
+		</div>
+	</div>
+</div>

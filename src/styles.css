@@ -1,0 +1,372 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+}
+
+.row:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0;
+}
+.row{display: inline-block;}
+*html .row{height: 1%;}
+.row{display: block;}
+
+a:link { 
+    color: #036; /* Цвет непосещенных ссылок */
+}
+a:visited { 
+    color: #606; /* Цвет посещенных ссылок */
+}
+a:hover { 
+    color: #004d99; /* Цвет ссылок при наведении на них курсора мыши */
+}
+a:active { 
+    color: black; /* Цвет активных ссылок */
+}
+
+.bluepage{
+	background:#00BFFF;
+}
+
+.header{
+
+}
+
+.inner-header{
+	background: white;
+	height: 50px;
+}
+
+.inner-header-1{
+	width: 15%;
+	height: 50px;
+	float: left;
+}
+
+.inner-header-2{
+	width: 70%;
+	height: 50px;
+	float: left;
+}
+
+.inner-header-3{
+	padding: 0px 10px 0px 30px;
+	width: 15%;
+	height: 50px;
+	float: left;
+}
+
+.navigation{
+	width: 15%;
+	float: left;
+}
+
+.inner-navigation{
+	border-style: solid;
+	border-color: #00BFFF;
+	border-width: 10px;
+	background: #F0F8FF;
+	min-height: 500px;
+	padding: 10px;
+}
+
+.content{
+	width: 70%;
+	float: left;
+}
+
+.inner-content{
+	background: #e6ecff;
+	min-height: 0px;
+}
+
+.inner-content-1{
+	background: white;
+	min-height: 0px;
+}
+
+.inner-content-2{
+	border-style: solid;
+	border-color: #00BFFF;
+	border-width: 10px 0px 10px 0px;
+	background: #F0F8FF;
+	min-height: 0px;
+	padding:15px;
+}
+
+.sidebar{
+	width: 15%;
+	float: left;
+}
+
+.inner-sidebar{
+	border-style: solid;
+	border-color: #00BFFF;
+	border-width: 10px;
+	background: #F0F8FF;
+	min-height: 500px;
+    padding: 10px;
+}
+
+.footer{
+	width: 100%;
+	float: left;
+}
+
+.inner-footer{
+	/*background-image: url(/images/9U6E5vxq6yY.jpg); /* Цвет фона и путь к файлу */
+	/*background-attachment: fixed;
+  min-height: 80px;
+	opacity: 0.88; /* Полупрозрачность элемента */
+	border-style: solid;
+	border-color: #00BFFF;
+	border-width: 10px 10px 10px 10px;
+	background: #F0F8FF;
+	min-height: 100px;
+	padding:10px;
+}
+
+.about-content{
+width: 100%;
+  float: left;
+}
+
+.about-inner-content{
+  background-image: url(/images/codepic.jpg); /* Цвет фона и путь к файлу */
+  background-attachment: fixed;
+  background-position: center,center;
+  min-height: 1000px;
+  opacity: 0.95; /* Полупрозрачность элемента */
+}
+
+.text-1{ /*для контента*/
+    text-indent: 1em;
+	font: 0.8em/1.6 Monaco, Mono-Space, monospace;
+    font-size: 180%;
+    padding:25px; /* Поля вокруг текста */
+    color:white;
+}
+
+.text-2 { /*для навигации*/
+	font-size: 120%;
+	font-family: monospace; 
+	color: black;
+}
+.text-3 { /*для шапки*/
+	font-size: 180%;
+	font-family: monospace; 
+	color: black;
+	text-align: center;
+}
+
+.letter-1{ /* Для span синий текст*/
+     color: #004d99; /* Красный цвет символов */ 
+     /*font-size: 200%; /* Размер шрифта в процентах */ 
+     font-family: serif; /* Шрифт с засечками */ 
+     position: relative; /* Относительное позиционирование */ 
+     /*top: 5px; /* Сдвиг сверху */ 
+}
+
+.letter-2{ /* Для красный span */
+     color: red; /* Красный цвет символов */ 
+     /*font-size: 200%; /* Размер шрифта в процентах */ 
+     font-family: serif; /* Шрифт с засечками */ 
+     position: relative; /* Относительное позиционирование */ 
+     /*top: 5px; /* Сдвиг сверху */ 
+}
+
+li{
+	list-style-type: disc; /*Вид маркера*/
+	list-style-position: outside;/*Выбор положения маркера относительно блока строк текста*/
+}
+ 
+p{
+    text-indent: 1em; /* Отступ первой строки */
+    font: 0.8em/1.6 Monaco, Mono-Space; /*serif для зарезок*/
+    font-size: 100%;
+    padding-left: 25px; /* Поля вокруг текста */
+    padding-right: 25px; /* Поля вокруг текста */
+    font-family: serif;
+}
+
+p.h { /*Для глав . Первая строка в новости*/
+	text-indent: 0; /* Для первого абзаца отступ убираем */
+    text-align:center;
+    letter-spacing:.1em;
+    margin-bottom:10px;
+    margin-right:-.1em;
+    font-family: monospace;
+    font-size:175%;
+}
+
+ul.hornav {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+ul.hornav li {
+  list-style: none;
+}
+
+ul.hornav li a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #aaa;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+ul.hornav li a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #2196f3; /*Синий цвет анимации*/
+  transition: 0.5s;
+}
+ul.hornav li a:hover {
+  color: #b6ec55; /*#fff для белого в навигации hornav*/
+}
+ul.hornav li a:hover::before {
+  animation: animate .5s linear forwards; 
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.homebutton {
+  display: inline-block;
+  height: 38px;
+  background: url(/images/QUV0dNzu4c0.jpg) center center no-repeat;
+  position:block-fixed;
+  cursor: pointer;
+  box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+  0 2px 0 rgba(255,255,255,.4),
+  inset 0 2px 0 rgba(0,0,0,.1);
+}
+
+.homebutton:hover {
+ /* box-shadow: 0 3px 20px rgba(0,0,0,.25),
+  inset 0 2px 0 rgba(255,255,255,.6),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);*/
+}
+
+.topbutton {
+  display: inline-block;
+
+  width: 50px;
+  height: 50px;
+  background: url(/images/uppage.jpg) center center no-repeat;
+  position:fixed;
+  bottom:50px;
+  right:6%;
+  cursor: pointer;
+  border-radius: 50%;
+
+  box-shadow: 0 3px 20px rgba(0,0,0,.25),
+  inset 0 2px 0 rgba(255,255,255,.6),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);
+}
+
+.topbutton:hover {
+  box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+  0 2px 0 rgba(255,255,255,.4),
+  inset 0 2px 0 rgba(0,0,0,.1);
+}
+
+.stylebutton-1 {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(30,255,188,1);
+  background: rgba(255,255,255,1);
+  transition: color .3s, background .5s;
+}
+
+.stylebutton-1:hover {
+  animation: stripes-1 .75s infinite linear;
+  background: linear-gradient(45deg, rgba(30,255,188,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(30,255,188,1) 50%,      rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(255,255,255,1));
+  background-size: 10px 10px;
+  color: #FF50E5;
+}
+
+@keyframes stripes-1 {
+  0% {background-position: 0 0;}
+  100% {background-position: 50px 0;}
+}
+
+.stylebutton-2 {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 10px 20px;
+
+  position: relative;
+  overflow: hidden;
+  border: 1.2px solid #2B8FDC;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif; 
+  color: #2B8FDC;
+  transition: .2s ease-in-out;
+  background-color: white;
+}
+.stylebutton-2:before {
+  content: "";
+  background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.stylebutton-2:hover {
+  background: #2B8FDC;
+  color: #F0F8FF;
+}
+.stylebutton-2:hover:before {
+  left: 200px;
+  transition: .5s ease-in-out;
+}
